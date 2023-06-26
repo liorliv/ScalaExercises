@@ -6,3 +6,7 @@ lazy val root = (project in file("."))
   .settings(
     name := "exercises"
   )
+
+libraryDependencies += "org.scalameta" %% "munit" % "0.7.22" % Test
+
+testFrameworks += new TestFramework("munit.Framework")
