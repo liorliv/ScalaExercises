@@ -257,7 +257,7 @@ trait Huffman extends HuffmanInterface {
       if (accText.isEmpty) acc
       else tailRec(accTable, accText.tail, acc ++ codeBits(accTable)(accText.head))
 
-    tailRec(convert(tree), text, List())
+    tailRec(convert(tree), text, List.empty)
   }
 }
 
