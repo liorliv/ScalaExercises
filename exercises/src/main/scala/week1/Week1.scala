@@ -1,10 +1,13 @@
 package week1
 
+import scala.annotation.tailrec
+
 object Week1 {
 
   def pascal(c: Int, r: Int): Int = if (c == 0 || c == r) 1 else pascal(c - 1, r - 1) + pascal(c, r - 1)
 
   def balance(chars: List[Char]): Boolean = {
+    @tailrec
     def tailrec(chars: List[Char], counter: Int): Boolean = {
       if (counter < 0) false
       else chars.headOption match {
